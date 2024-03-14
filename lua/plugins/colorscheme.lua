@@ -1,10 +1,9 @@
 return {
-	"blazkowolf/gruber-darker.nvim",
+	"EdenEast/nightfox.nvim",
 	lazy = false,
 	priority = 1000,
-	dependencies = { "rktjmp/lush.nvim" },
 	config = function()
-		vim.cmd.colorscheme("gruber-darker")
+		vim.cmd.colorscheme("nightfox")
 	end,
 }
 
