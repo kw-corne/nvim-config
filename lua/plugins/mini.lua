@@ -1,7 +1,13 @@
 return {
 	"echasnovski/mini.nvim",
 	config = function()
-		-- require("mini.ai").setup { n_lines = 500 }
+		require("mini.files").setup {}
+		local minifiles_toggle = function(...)
+			if not MiniFiles.close() then 
+				MiniFiles.open(...) 
+			end
+		end
+		vim.keymap.set("n", "<leader>e", minifiles_toggle )
 
 		local statusline = require("mini.statusline")
 		statusline.setup()

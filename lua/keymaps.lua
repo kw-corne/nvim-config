@@ -17,8 +17,6 @@ return function()
 
 			["[d"] = vim.diagnostic.goto_prev,
 			["]d"] = vim.diagnostic.goto_next,
-			["<leader>e"] = vim.diagnostic.open_float,
-			["<leader>q"] = vim.diagnostic.setloclist,
 
 			["<C-h>"] = "<C-w><C-h>",
 			["<C-j>"] = "<C-w><C-j>",

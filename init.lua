@@ -12,12 +12,13 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	"nvim-lua/plenary.nvim",
 
+	require("plugins.transparent"),
+	require("plugins.smartsplits"),
 	require("plugins.ufo"),
 	require("plugins.guess_indent"),
 	require("plugins.neoscroll"),
 	require("plugins.arrow"),
 	require("plugins.toggleterm"),
-	require("plugins.neotree"),
 	require("plugins.autopairs"),
 	require("plugins.indent-blankline"),
 	require("plugins.colorscheme"),

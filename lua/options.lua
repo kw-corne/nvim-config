@@ -27,6 +27,8 @@ return function()
 	vim.o.showmode = false
 	vim.o.cursorline = true
 	vim.o.scrolloff = 10
+	vim.o.relativenumber = true
+	vim.o.number = true
 
 	-- wo
 	vim.wo.number = true

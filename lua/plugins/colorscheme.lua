@@ -1,9 +1,11 @@
 return {
-	"EdenEast/nightfox.nvim",
+	"rose-pine/neovim",
 	lazy = false,
 	priority = 1000,
 	config = function()
-		vim.cmd.colorscheme("nightfox")
-	end,
+		require("rose-pine").setup({
+			dim_inactive_windows = true,
+		})
+		vim.cmd.colorscheme("rose-pine-moon")
+	end
 }
-
