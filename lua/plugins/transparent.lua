@@ -17,6 +17,7 @@ return {
 		transparent.clear_prefix "MiniStatusline"
 		transparent.clear_prefix "MiniFiles"
 		transparent.clear_prefix "Telescope"
+		transparent.clear_prefix "WhichKey"
 	end,
 	keys = {
 		{ prefix .. "T", "<cmd>TransparentToggle<CR>", desc = "Toggle transparency" },

@@ -1,3 +1,4 @@
+require("global")()
 require("options")()
 require("keymaps")()
 require("autocommands")()
