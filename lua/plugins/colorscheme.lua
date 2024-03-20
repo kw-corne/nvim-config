@@ -1,11 +1,8 @@
 return {
-	"rose-pine/neovim",
+	"catppuccin/nvim",
 	lazy = false,
 	priority = 1000,
 	config = function()
-		require("rose-pine").setup({
-			dim_inactive_windows = true,
-		})
-		vim.cmd.colorscheme("rose-pine-moon")
-	end
+		vim.cmd.colorscheme("catppuccin")
+	end,
 }

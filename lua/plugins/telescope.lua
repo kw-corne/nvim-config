@@ -37,16 +37,21 @@ return {
 		local builtin = require("telescope.builtin")
 		local base_key = "<leader>f"
 
+		local function find_all_files()
+			builtin.find_files { hidden = true, no_ignore = true }
+		end
+
 		local telescope_mappings = {
 			{ base_key .. "h", builtin.help_tags,   { desc = "[F]ind [H]elp" } },
 			{ base_key .. "k", builtin.keymaps,     { desc = "[F]ind [K]eymaps" } },
 			{ base_key .. "f", builtin.find_files,  { desc = "[F]ind [F]iles" } },
+			{ base_key .. "F", find_all_files,      { desc = "[F]ind All [F]iles" } },
 			{ base_key .. "s", builtin.builtin,     { desc = "[F]ind [S]elect Telescope" } },
 			{ base_key .. "w", builtin.grep_string, { desc = "[F]ind current [W]ord" } },
 			{ base_key .. "g", builtin.live_grep,   { desc = "[F]ind by [G]rep" } },
 			{ base_key .. "d", builtin.diagnostics, { desc = "[F]ind [D]iagnostics" } },
 			{ base_key .. "r", builtin.resume,      { desc = "[F]ind [R]esume" } },
-			{ base_key .. "b", builtin.buffers,    { desc = '[F]ind [B]uffers' } },
+			{ base_key .. "b", builtin.buffers,     { desc = '[F]ind [B]uffers' } },
 			{ base_key .. ".", builtin.oldfiles,    { desc = '[F]ind Recent Files ("." for repeat)' } },
 		}
 
