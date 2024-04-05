@@ -10,6 +10,9 @@ return {
 	end,
 	config = function()
 		require("nvim-treesitter.configs").setup {
+			autotag = {
+				enable = true,
+			},
 			ensure_installed = {
 				"markdown",
 				"vim",

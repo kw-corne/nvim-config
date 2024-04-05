@@ -1,15 +1,16 @@
 return {
-	-- "catppuccin/nvim",
-	"sainnhe/gruvbox-material",
+	"folke/tokyonight.nvim",
 	lazy = false,
 	priority = 1000,
-	init = function()
-		vim.g.gruvbox_material_background = "hard"
-		vim.g.gruvbox_material_foreground = "mix"
-		vim.g.gruvbox_material_dim_inactive_windows = 0
-		vim.g.gruvbox_material_float_style = "dim"
-	end,
 	config = function()
-		vim.cmd.colorscheme("gruvbox-material")
+		require("tokyonight").setup({
+			on_highlights = function(hl, c)
+				hl.DiagnosticUnnecessary = {
+					fg = c.comment;
+				}
+			end,
+		})
+
+		vim.cmd.colorscheme("tokyonight-night")
 	end,
 }

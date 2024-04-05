@@ -29,6 +29,7 @@ return function()
 	vim.o.scrolloff = 10
 	vim.o.relativenumber = true
 	vim.o.number = true
+	vim.o.colorcolumn = "100"
 
 	-- wo
 	vim.wo.number = true
