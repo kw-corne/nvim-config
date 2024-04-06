@@ -1,13 +1,17 @@
 return {
 	"echasnovski/mini.nvim",
 	config = function()
-		require("mini.files").setup {}
-		local minifiles_toggle = function(...)
-			if not MiniFiles.close() then 
-				MiniFiles.open(...) 
+		require("mini.files").setup {
+			windows = {
+				preview = true,
+			}
+		}
+		local minifiles_toggle = function()
+			if not MiniFiles.close() then
+				MiniFiles.open(vim.api.nvim_buf_get_name(0))
 			end
 		end
-		vim.keymap.set("n", "<leader>e", minifiles_toggle )
+		vim.keymap.set("n", "<leader>e", minifiles_toggle)
 
 		local statusline = require("mini.statusline")
 		statusline.setup()

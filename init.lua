@@ -13,6 +13,8 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 	"nvim-lua/plenary.nvim",
 
+	require("plugins.trouble"),
+	require("plugins.zen-mode"),
 	require("plugins.transparent"),
 	require("plugins.smartsplits"),
 	require("plugins.ufo"),
@@ -32,5 +34,8 @@ require("lazy").setup({
 	require("plugins.lspconfig"),
 	require("plugins.cmp"),
 	require("plugins.todo-comments"),
+	require("plugins.ts-autotag"),
 	require("plugins.treesitter"),
 })
+
+
