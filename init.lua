@@ -131,7 +131,12 @@ require("lazy").setup {
     "scottmckendry/cyberdream.nvim",
     lazy = false,
     priority = 1000,
-    config = function() vim.cmd "colorscheme cyberdream" end,
+    config = function()
+      require("cyberdream").setup {
+        transparent = true,
+      }
+      vim.cmd "colorscheme cyberdream"
+    end,
   },
 
   {
