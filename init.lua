@@ -512,6 +512,9 @@ require("lazy").setup {
           lualine_y = { "progress" },
           lualine_z = { "location" },
         },
+        options = {
+          theme = "auto",
+        },
       }
     end,
   },
