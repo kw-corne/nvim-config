@@ -10,6 +10,10 @@ vim.opt.showmode = false
 
 vim.schedule(function() vim.opt.clipboard = "unnamedplus" end)
 
+vim.diagnostic.config {
+  float = { border = "rounded" },
+}
+
 vim.o.foldcolumn = "1"
 vim.o.foldlevel = 99
 vim.o.foldlevelstart = 99
