@@ -573,6 +573,7 @@ require("lazy").setup {
         { desc = "Set current [T]erminal [C]ommand" }
       )
       vim.keymap.set("n", "<F5>", run_current_cmd, { desc = "Run the currently set command" })
+      vim.keymap.set("n", "<F7>", "<cmd>ToggleTerm direction=float<cr>", { desc = "Open terminal" })
     end,
   },
 
