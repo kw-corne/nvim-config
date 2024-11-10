@@ -53,8 +53,6 @@ vim.keymap.set("n", "Y", "y$")
 vim.keymap.set("n", ";", "A;<Esc>")
 vim.keymap.set("n", ",", "A,<Esc>")
 vim.keymap.set("n", "<C-s>", ":wa<CR>")
-vim.keymap.set({ "n", "v" }, "iq", 'i"')
-vim.keymap.set({ "n", "v" }, "aq", 'a"')
 
 -- Quickfix list
 vim.keymap.set(
