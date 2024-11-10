@@ -596,4 +596,29 @@ require("lazy").setup {
       },
     },
   },
+
+  {
+    "cbochs/grapple.nvim",
+    dependencies = {
+      { "nvim-tree/nvim-web-devicons", lazy = true },
+    },
+    config = function()
+      vim.keymap.set("n", "<leader><leader>a", "<cmd>Grapple tag<CR>", { desc = "[T]ag file" })
+      vim.keymap.set("n", "<leader><leader>d", "<cmd>Grapple untag<CR>", { desc = "[U]ntag file" })
+      vim.keymap.set(
+        "n",
+        "<leader><leader>t",
+        "<cmd>Grapple open_tags<CR>",
+        { desc = "[T]ags open" }
+      )
+      for i = 1, 9 do
+        vim.keymap.set(
+          "n",
+          "<leader>" .. i,
+          "<cmd>Grapple select index=" .. i .. "<CR>",
+          { desc = "Select index " .. i }
+        )
+      end
+    end,
+  },
 }
