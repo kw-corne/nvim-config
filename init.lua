@@ -275,7 +275,6 @@ require("lazy").setup {
       "WhoIsSethDaniel/mason-tool-installer.nvim",
       { "j-hui/fidget.nvim", opts = {} },
       "saghen/blink.cmp",
-      -- "hrsh7th/cmp-nvim-lsp",
     },
     config = function()
       vim.api.nvim_create_autocmd("LspAttach", {
