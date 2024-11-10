@@ -358,15 +358,19 @@ require("lazy").setup {
 
       local servers = {
         lua_ls = {
-          -- cmd = {...},
-          -- filetypes = {...},
-          -- capabilities = {},
           settings = {
             Lua = {
               completion = {
                 callSnippet = "Replace",
               },
               diagnostics = { disable = { "missing-fields" } },
+            },
+          },
+        },
+        rust_analyzer = {
+          settings = {
+            ["rust_analyzer"] = {
+              diagnostics = { enable = true },
             },
           },
         },
