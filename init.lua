@@ -10,8 +10,6 @@ vim.opt.showmode = false
 
 vim.schedule(function() vim.opt.clipboard = "unnamedplus" end)
 
-vim.cmd "colorscheme default"
-
 vim.o.foldcolumn = "1"
 vim.o.foldlevel = 99
 vim.o.foldlevelstart = 99
@@ -122,6 +120,13 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup {
   "tpope/vim-sleuth",
+
+  {
+    "scottmckendry/cyberdream.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function() vim.cmd "colorscheme cyberdream" end,
+  },
 
   {
     "lewis6991/gitsigns.nvim",
